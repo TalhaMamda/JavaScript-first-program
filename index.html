@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Math Expression: Familiar Operators
+    </h1>
+    <br>
+    <h2>
+        Percentage calculator:
+    </h2>
+    <form onsubmit="calculate(); return false;">
+        <label for="totalmarks">Total Marks:</label>
+        <input type="number" min="1" required id="totalmarks" placeholder="Enter your marks">
+        <br>
+        <label for="marksObtained">Marks Obtained:</label>
+        <input type="number" min="1" required id="marksObtained" placeholder="Enter your marks">
+        <br>
+        <button type="submit">calculate</button>
+    </form>
+    <h1 id="result"></h1>
+
+    <!-- JAVASCRIPT CODING -->
+    <script>
+        totalmarks = Number(totalmarks);
+        function calculate() {
+            let totalmarks = document.querySelector("#totalmarks").value;
+            let marksObtained = document.querySelector("#marksObtained").value;
+            let result = marksObtained * 100 / totalmarks;
+            document.querySelector("#result").innerHTML = `you have got ${result}%`;
+        }
+        // for show a variable thats its inout is a number use these:
+        // totalmarks = +totalmarks;
+        // totalmarks = parseInttotalmarks;
+        // totalmarks = Number(totalmarks);
+        // totalmarks = parseFloattotalmarks;
+        </script>
+
+
+
+</body>
+
+</html>
